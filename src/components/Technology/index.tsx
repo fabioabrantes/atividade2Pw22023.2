@@ -1,4 +1,4 @@
-export function Task(){
+export function Technology(){
   return (
     <div>
       <h1>tarefa</h1>

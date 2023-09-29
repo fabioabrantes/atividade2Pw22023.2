@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { Task } from "../Task";
+import { Task } from "../Technology";
 
-export function Tasks(){
-  const [showTaks, setShowTasks] = useState(false);
+export function Technologies(){
+  const [showTechs, setShowTechs] = useState(false);
   return (
     <div>
       {
-        showTaks ? 
+        showTechs ? 
           (<Task/>)
         : 
          (

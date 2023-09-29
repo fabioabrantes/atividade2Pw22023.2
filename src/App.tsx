@@ -1,22 +1,28 @@
 
 import { Header } from './components/Header';
-import { InputTask } from './components/InputTask';
-import { Tasks } from './components/Tasks';
+import { InputTechnology } from './components/InputTechnology';
+import { Technologies } from './components/Technologies';
 
 import './global.css';
 
 import styles from './App.module.css';
+import { useState } from 'react';
 
+type Technology = {
+  id:string;
+  studied:boolean;
+  text:string;
+}
 function App() {
-  
+  const [technologies, setTechnologies] = useState<Technology[]>([]);
 
   return (
     <div className={styles.container}>
       <Header title="Minha lista de Tecnologias"/>
 
       <main>
-          <InputTask/>
-          <Tasks />
+          <InputTechnology/>
+          <Technologies  />
       </main>
     </div>
   )
