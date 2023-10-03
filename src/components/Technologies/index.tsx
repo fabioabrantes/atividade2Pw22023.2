@@ -1,5 +1,7 @@
 import { Technology } from "../Technology";
 
+import  styles from './Tasks.module.css';
+
 type Technology = {
   id:string;
   studied:boolean;
@@ -18,7 +20,7 @@ export function Technologies({techs,checkedTech,deleteTech}:TechnologiesProps){
   const technologiesCompleted = techs.reduce(() => {return 0}, 0);
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <div>
           <strong>Tecnologias criadas</strong>

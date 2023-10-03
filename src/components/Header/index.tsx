@@ -1,10 +1,12 @@
+import styles from './Header.module.css';
+
 type Props = {
   title:string;
 }
 export function Header({title}:Props){
   return (
-    <div>
+    <header className={styles.header}>
       <span>{title}</span>
-    </div>
+    </header>
   )
 }

@@ -1,10 +1,12 @@
 import { PlusCircle } from "phosphor-react";
 
-interface InputTeachnologyProps {
-  createTeach: (text: string) => void;
+import styles from './InputTask.module.css';
+
+interface InputTechnologyProps {
+  createTech: (text: string) => void;
 }
 
-export function InputTechnology({createTeach}:InputTeachnologyProps){
+export function InputTechnology({createTech}:InputTechnologyProps){
 /* cria estado que guarda a tecnonoly que é uma string */
 
   /* função que cria uma tecnologia no array  */
@@ -13,12 +15,12 @@ export function InputTechnology({createTeach}:InputTeachnologyProps){
   }
 
   return (
-    <div>
-      <input type="text" onChange={()=>{}}/>
+    <div className={styles.container}>
+      <input className={styles.input} type="text" onChange={()=>{}}/>
       
-      <button onClick={handleCreateTechnology}>
+      <button className={styles.button} onClick={handleCreateTechnology}>
         <span>Criar</span>
-        <PlusCircle size={32} color="#923517" weight="duotone" />
+        <PlusCircle size={16} weight="bold" />
       </button>
     </div>
   )

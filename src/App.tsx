@@ -1,3 +1,4 @@
+import { useState } from 'react';
 
 import { Header } from './components/Header';
 import { InputTechnology } from './components/InputTechnology';
@@ -6,7 +7,6 @@ import { Technologies } from './components/Technologies';
 import './global.css';
 
 import styles from './App.module.css';
-import { useState } from 'react';
 
 type Technology = {
   id:string;
@@ -45,10 +45,10 @@ function App() {
     //salva o array no estado
   }
   return (
-    <div className={styles.container}>
+    <div>
       <Header title="Minha lista de Tecnologias"/>
 
-      <main>
+      <main className={styles.main}>
           <InputTechnology createTech={createTechnology}/>
           
           <Technologies  
