@@ -1,6 +1,6 @@
 import { Technology } from "../Technology";
 
-import  styles from './Tasks.module.css';
+import  styles from './Technologies.module.css';
 
 type Technology = {
   id:string;
@@ -21,27 +21,27 @@ export function Technologies({techs,checkedTech,deleteTech}:TechnologiesProps){
 
   return (
     <div className={styles.container}>
-      <div>
-        <div>
+      <div className={styles.InfoTech}>
+        <div className={styles.InfoTechCreated}>
           <strong>Tecnologias criadas</strong>
           <span>{createdTechnologies}</span>
         </div>
 
-        <div>
+        <div className={styles.InfoTechStudied}>
           <strong>Concluídas</strong>
           <span>{technologiesCompleted} de {createdTechnologies}</span>
         </div>
       </div>
 
       { 
-      createdTechnologies ? 
+      createdTechnologies > 0 ? 
           /* cria os componentes tecnologia passando os métodos checkedTech e deleteTech e a technology como propriedades*/
           <></>
         :
-          <div>
-            <strong>Você ainda não tem tecnologias cadastradas</strong>
-            <p>Crie tecnologias e organize seus itens a fazer</p>
-          </div>
+        <div className={styles.techsEmpty}>
+          <strong>Você ainda não tem tecnologias cadastradas</strong>
+          <p>Crie tecnologias e organize seus itens a fazer</p>
+        </div>
       }
     </div>
   );
